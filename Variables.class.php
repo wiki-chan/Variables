@@ -1,5 +1,8 @@
 <?php
 
+// Include the settings file:
+require_once dirname( __FILE__ ) . '/Variables.settings.php';
+
 /**
  * Extension class with basic extension information. This class serves as static
  * class with the static parser functions but also als variables store instance
