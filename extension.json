@@ -1,0 +1,40 @@
+{
+	"name": "Variables",
+	"version": "2.1.0",
+	"author": [
+		"Rob Adams",
+		"Tom Hempel",
+		"Xiloynaha",
+		"[https://www.mediawiki.org/wiki/User:Danwe Daniel Werner]",
+		"페네트-"
+	],
+	"url": "https://github.com/wiki-chan/Variables",
+	"descriptionmsg": "variables-desc",
+	"type": "parserhook",
+	"MessagesDirs": {
+		"Variables": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"Variables": "Variables.i18n.php",
+		"VariablesMagic": "Variables.i18n.magic.php"
+	},
+	"AutoloadClasses": {
+		"ExtVariables": "Variables.class.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"ExtVariables::init"
+		],
+		"ParserClearState": [
+			"ExtVariables::onParserClearState"
+		],
+		"InternalParseBeforeSanitize": [
+			"ExtVariables::onInternalParseBeforeSanitize"
+		]
+	},
+	"ParserTestFiles": [
+		"tests/mwparsertests/Variables.txt"
+	]
+}
