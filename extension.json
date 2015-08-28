@@ -30,11 +30,14 @@
 		"ParserClearState": [
 			"ExtVariables::onParserClearState"
 		],
-		"InternalParseBeforeSanitize": [
-			"ExtVariables::onInternalParseBeforeSanitize"
+		"InternalParseBeforeLinks": [
+			"ExtVariables::onInternalParseBeforeLinks"
 		]
 	},
 	"ParserTestFiles": [
 		"tests/mwparsertests/Variables.txt"
-	]
+	],
+	"config": {
+		"VariablesDisabledFunctions": []
+	}
 }

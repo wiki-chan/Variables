@@ -26,4 +26,4 @@
  * @since 2.0
  * @var array
  */
-$egVariablesDisabledFunctions = array();
+$wgVariablesDisabledFunctions = array();

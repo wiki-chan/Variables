@@ -78,10 +78,12 @@ class ExtVariables {
 			// prefix parser functions with 'pf_'
 			$functionCallback = array( __CLASS__, 'pf_' . $name );
 		}
-		global $egVariablesDisabledFunctions;
+		global $wgVariablesDisabledFunctions;
+
+		if ($wgVariablesDisabledFunctions == null) $wgVariablesDisabledFunctions = array();
 
 		// register function only if not disabled by configuration:
-		if( ! in_array( $name, $egVariablesDisabledFunctions ) ) {
+		if( ! in_array( $name, $wgVariablesDisabledFunctions ) ) {
 			$parser->setFunctionHook( $name, $functionCallback, $flags );
 		}
 	}

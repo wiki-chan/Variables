@@ -41,6 +41,8 @@ $wgHooks['ParserClearState'        ][] = 'ExtVariables::onParserClearState';
 // parser tests registration:
 $wgParserTestFiles[] = dirname( __FILE__ ) . '/tests/mwparsertests/Variables.txt';
 
+global $wgVersion;
+
 if( version_compare( $wgVersion, '1.20', '<' ) ) {
 	// fallback for InternalParseBeforeSanitize hook
 	$wgHooks['InternalParseBeforeLinks'][] = 'ExtVariables::onInternalParseBeforeLinks';
